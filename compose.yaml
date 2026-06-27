@@ -1,0 +1,24 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./.nginx/Dockerfile
+    ports:
+      - "8080:80"
+    container_name: cv_ai_nginx
+
+  backend:
+    build:
+      context: ./backend/CV_AI_Project/
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/CV_AI_Project:/app
+    container_name: cv_ai_backend
+
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+    container_name: cv_ai_frontend

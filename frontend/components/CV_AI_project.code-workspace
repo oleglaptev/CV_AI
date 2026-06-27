@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "CV_AI_project",
+			"path": "../.."
+		},
+		{
+			"name": "cvaifront",
+			"path": "../../../../cvaifront"
+		}
+	],
+	"settings": {}
+}
